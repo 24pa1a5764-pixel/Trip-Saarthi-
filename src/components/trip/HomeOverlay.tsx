@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import type { UserData, Place } from "@/lib/tripData";
 import { MOCK_DATA } from "@/lib/tripData";
+import { useTranslation } from "@/hooks/useTranslation";
+import type { TranslationKey } from "@/lib/translations";
 
 interface HomeOverlayProps {
   user: UserData;
