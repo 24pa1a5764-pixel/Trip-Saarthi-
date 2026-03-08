@@ -1,5 +1,7 @@
 import { Home, MessageCircle, UserCircle, Map, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
+import type { TranslationKey } from "@/lib/translations";
 
 interface BottomNavProps {
   active: string;
@@ -8,11 +10,11 @@ interface BottomNavProps {
 }
 
 const tabs = [
-  { id: "home", icon: Home, label: "Home" },
-  { id: "discover", icon: Map, label: "Discover" },
-  { id: "community", icon: Users, label: "Community" },
-  { id: "chat", icon: MessageCircle, label: "Saarthi AI" },
-  { id: "profile", icon: UserCircle, label: "Profile" },
+  { id: "home", icon: Home, labelKey: "nav_home" as TranslationKey },
+  { id: "discover", icon: Map, labelKey: "nav_discover" as TranslationKey },
+  { id: "community", icon: Users, labelKey: "nav_community" as TranslationKey },
+  { id: "chat", icon: MessageCircle, labelKey: "nav_chat" as TranslationKey },
+  { id: "profile", icon: UserCircle, labelKey: "nav_profile" as TranslationKey },
 ];
 
 export default function BottomNav({ active, setActive, cartCount = 0 }: BottomNavProps) {
