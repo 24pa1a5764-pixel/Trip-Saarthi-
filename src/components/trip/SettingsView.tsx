@@ -68,7 +68,7 @@ export default function SettingsView({ onBack }: SettingsViewProps) {
       <div className="flex-1 overflow-y-auto ts-scrollbar-hide px-5 py-4 space-y-6">
         {/* Appearance */}
         <section>
-          <h3 className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">Appearance</h3>
+          <h3 className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">{t("appearance")}</h3>
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
