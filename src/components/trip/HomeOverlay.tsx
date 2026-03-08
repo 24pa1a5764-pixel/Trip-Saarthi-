@@ -34,12 +34,12 @@ interface HomeOverlayProps {
 }
 
 const categories = [
-  { id: "heritage", icon: Landmark, label: "Heritage", color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
-  { id: "nature", icon: Sunset, label: "Nature", color: "text-ts-green", bg: "bg-ts-green/10" },
-  { id: "food", icon: Coffee, label: "Food", color: "text-ts-rose", bg: "bg-ts-rose/10" },
-  { id: "shopping", icon: Briefcase, label: "Markets", color: "text-ts-purple", bg: "bg-ts-purple/10" },
-  { id: "adventure", icon: Mountain, label: "Adventure", color: "text-ts-sky", bg: "bg-ts-sky/10" },
-  { id: "spiritual", icon: Star, label: "Spiritual", color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
+  { id: "heritage", icon: Landmark, labelKey: "cat_heritage" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
+  { id: "nature", icon: Sunset, labelKey: "cat_nature" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10" },
+  { id: "food", icon: Coffee, labelKey: "cat_food" as TranslationKey, color: "text-ts-rose", bg: "bg-ts-rose/10" },
+  { id: "shopping", icon: Briefcase, labelKey: "cat_markets" as TranslationKey, color: "text-ts-purple", bg: "bg-ts-purple/10" },
+  { id: "adventure", icon: Mountain, labelKey: "cat_adventure" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10" },
+  { id: "spiritual", icon: Star, labelKey: "cat_spiritual" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
 ];
 
 const trending: Place[] = [
