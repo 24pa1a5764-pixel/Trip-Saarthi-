@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Eye, Trash2, LogOut, MapPin, Compass, Star, BookOpen } from "lucide-react";
+import { Eye, Trash2, LogOut, MapPin, Compass, Star, BookOpen, Settings } from "lucide-react";
 import type { UserData, SavedTrip } from "@/lib/tripData";
 
 interface ProfileViewProps {
