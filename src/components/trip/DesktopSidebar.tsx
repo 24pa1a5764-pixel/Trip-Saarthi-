@@ -1,0 +1,136 @@
+import { motion } from "framer-motion";
+import {
+  Home, Map, Users, MessageCircle, UserCircle,
+  Utensils, CloudSun, Palette, Gem, Medal, Bus,
+  PartyPopper, Globe, Camera, Leaf, ShieldAlert,
+  AlertTriangle, Wand2, ChevronLeft, ChevronRight, Compass
+} from "lucide-react";
+import { useState } from "react";
+
+interface DesktopSidebarProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+  onFeatureClick: (feature: string) => void;
+  onSafetyClick: () => void;
+  onEmergencyClick: () => void;
+  cartCount: number;
+}
+
+const mainNav = [
+  { id: "home", icon: Home, label: "Home" },
+  { id: "discover", icon: Map, label: "Discover" },
+  { id: "community", icon: Users, label: "Community" },
+  { id: "chat", icon: MessageCircle, label: "Saarthi AI" },
+  { id: "profile", icon: UserCircle, label: "Profile" },
+];
+
+const features = [
+  { id: "food_finder", icon: Utensils, label: "Food Finder", color: "text-ts-rose", bg: "bg-ts-rose/10" },
+  { id: "weather", icon: CloudSun, label: "Weather", color: "text-ts-sky", bg: "bg-ts-sky/10" },
+  { id: "mood", icon: Palette, label: "Mood Match", color: "text-ts-purple", bg: "bg-ts-purple/10" },
+  { id: "hidden_gems", icon: Gem, label: "Hidden Gems", color: "text-ts-sky", bg: "bg-ts-sky/10" },
+  { id: "badges", icon: Medal, label: "Badges", color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
+  { id: "transport", icon: Bus, label: "Transport", color: "text-ts-green", bg: "bg-ts-green/10" },
+  { id: "festivals", icon: PartyPopper, label: "Festivals", color: "text-ts-purple", bg: "bg-ts-purple/10" },
+  { id: "language", icon: Globe, label: "Translator", color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
+  { id: "photo_spots", icon: Camera, label: "Photo Spots", color: "text-ts-sky", bg: "bg-ts-sky/10" },
+  { id: "carbon", icon: Leaf, label: "Eco Track", color: "text-ts-green", bg: "bg-ts-green/10" },
+];
+
+export default function DesktopSidebar({
+  activeTab, setActiveTab, onFeatureClick, onSafetyClick, onEmergencyClick, cartCount
+}: DesktopSidebarProps) {
+  const [collapsed, setCollapsed] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ x: -20, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      className={`hidden md:flex flex-col h-full bg-card border-r border-border shrink-0 transition-all duration-300 ${collapsed ? "w-[68px]" : "w-[240px]"}`}
+    >
+      {/* Logo */}
+      <div className={`p-4 flex items-center ${collapsed ? "justify-center" : "gap-3"} border-b border-border`}>
+        <div className="ts-gradient-hero w-9 h-9 rounded-xl flex items-center justify-center shrink-0">
+          <Compass className="w-5 h-5 text-primary-foreground" />
+        </div>
+        {!collapsed && (
+          <div>
+            <h1 className="text-sm font-display font-bold text-foreground">TripSaarthi</h1>
+            <p className="text-[9px] text-muted-foreground">Smart Travel Companion</p>
+          </div>
+        )}
+      </div>
+
+      {/* Main nav */}
+      <div className="p-3 space-y-1">
+        {!collapsed && <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider px-3 mb-2">Navigation</p>}
+        {mainNav.map((item) => {
+          const Icon = item.icon;
+          const isActive = activeTab === item.id;
+          return (
+            <button
+              key={item.id}
+              onClick={() => setActiveTab(item.id)}
+              className={`w-full flex items-center ${collapsed ? "justify-center" : "gap-3 px-3"} py-2.5 rounded-xl transition text-left ${isActive ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
+            >
+              <Icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? "text-primary" : ""}`} />
+              {!collapsed && <span className={`text-xs font-medium ${isActive ? "font-bold" : ""}`}>{item.label}</span>}
+              {!collapsed && item.id === "home" && cartCount > 0 && (
+                <span className="ml-auto text-[9px] font-bold bg-primary text-primary-foreground w-5 h-5 rounded-full flex items-center justify-center">{cartCount}</span>
+              )}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Divider */}
+      <div className="mx-3 border-t border-border" />
+
+      {/* Quick Features */}
+      <div className="p-3 flex-1 overflow-y-auto ts-scrollbar-hide space-y-1">
+        {!collapsed && <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider px-3 mb-2">Quick Tools</p>}
+        {features.map((feat) => {
+          const Icon = feat.icon;
+          return (
+            <button
+              key={feat.id}
+              onClick={() => onFeatureClick(feat.id)}
+              className={`w-full flex items-center ${collapsed ? "justify-center" : "gap-3 px-3"} py-2 rounded-xl text-muted-foreground hover:bg-muted hover:text-foreground transition`}
+            >
+              <div className={`${feat.bg} p-1.5 rounded-lg shrink-0`}>
+                <Icon className={`w-3.5 h-3.5 ${feat.color}`} />
+              </div>
+              {!collapsed && <span className="text-[11px] font-medium">{feat.label}</span>}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Bottom actions */}
+      <div className="p-3 border-t border-border space-y-1">
+        <button
+          onClick={onSafetyClick}
+          className={`w-full flex items-center ${collapsed ? "justify-center" : "gap-3 px-3"} py-2 rounded-xl text-muted-foreground hover:bg-ts-saffron/10 hover:text-ts-saffron transition`}
+        >
+          <ShieldAlert className="w-4 h-4 text-ts-saffron shrink-0" />
+          {!collapsed && <span className="text-[11px] font-medium">Safety Info</span>}
+        </button>
+        <button
+          onClick={onEmergencyClick}
+          className={`w-full flex items-center ${collapsed ? "justify-center" : "gap-3 px-3"} py-2 rounded-xl text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition`}
+        >
+          <AlertTriangle className="w-4 h-4 text-destructive shrink-0" />
+          {!collapsed && <span className="text-[11px] font-medium">Emergency</span>}
+        </button>
+      </div>
+
+      {/* Collapse toggle */}
+      <button
+        onClick={() => setCollapsed(!collapsed)}
+        className="p-3 border-t border-border flex items-center justify-center text-muted-foreground hover:text-foreground transition"
+      >
+        {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+      </button>
+    </motion.div>
+  );
+}
