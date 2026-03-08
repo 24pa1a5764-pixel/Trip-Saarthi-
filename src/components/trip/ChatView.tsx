@@ -72,7 +72,7 @@ export default function ChatView({ messages, setMessages }: ChatViewProps) {
             </div>
             <p className="text-sm font-bold text-foreground mb-1">Namaste! 🙏</p>
             <p className="text-xs text-muted-foreground max-w-[250px]">
-              I'm your personal India travel expert. Ask me anything about destinations, safety, food, or culture!
+              {t("saarthi_welcome")}
             </p>
           </div>
         )}
