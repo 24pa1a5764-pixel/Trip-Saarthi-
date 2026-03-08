@@ -91,7 +91,7 @@ export default function DesktopSidebar({
 
       {/* Quick Features */}
       <div className="p-3 flex-1 overflow-y-auto ts-scrollbar-hide space-y-1">
-        {!collapsed && <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider px-3 mb-2">Quick Tools</p>}
+        {!collapsed && <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider px-3 mb-2">{t("quick_tools")}</p>}
         {features.map((feat) => {
           const Icon = feat.icon;
           return (
