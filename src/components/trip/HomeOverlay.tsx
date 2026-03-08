@@ -56,17 +56,17 @@ const trending: Place[] = [
 ].filter(Boolean) as Place[];
 
 const quickFeatures = [
-  { icon: Utensils, label: "Food Finder", color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onFoodFinderClick" },
-  { icon: CloudSun, label: "Weather", color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onWeatherClick" },
-  { icon: Palette, label: "Mood Match", color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onMoodClick" },
-  { icon: Gem, label: "Hidden Gems", color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onHiddenGemsClick" },
-  { icon: Medal, label: "Badges", color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onBadgesClick" },
-  { icon: Bus, label: "Transport", color: "text-ts-green", bg: "bg-ts-green/10", key: "onTransportClick" },
-  { icon: PartyPopper, label: "Festivals", color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onFestivalsClick" },
-  { icon: Globe, label: "Translator", color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onLanguageClick" },
-  { icon: Camera, label: "Photo Spots", color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onPhotoSpotsClick" },
-  { icon: Users, label: "Community", color: "text-ts-green", bg: "bg-ts-green/10", key: "onCommunityClick" },
-  { icon: Leaf, label: "Eco Track", color: "text-ts-green", bg: "bg-ts-green/10", key: "onCarbonClick" },
+  { icon: Utensils, labelKey: "feat_food_finder" as TranslationKey, color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onFoodFinderClick" },
+  { icon: CloudSun, labelKey: "feat_weather" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onWeatherClick" },
+  { icon: Palette, labelKey: "feat_mood_match" as TranslationKey, color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onMoodClick" },
+  { icon: Gem, labelKey: "feat_hidden_gems" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onHiddenGemsClick" },
+  { icon: Medal, labelKey: "feat_badges" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onBadgesClick" },
+  { icon: Bus, labelKey: "feat_transport" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onTransportClick" },
+  { icon: PartyPopper, labelKey: "feat_festivals" as TranslationKey, color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onFestivalsClick" },
+  { icon: Globe, labelKey: "feat_translator" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onLanguageClick" },
+  { icon: Camera, labelKey: "feat_photo_spots" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onPhotoSpotsClick" },
+  { icon: Users, labelKey: "feat_community" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onCommunityClick" },
+  { icon: Leaf, labelKey: "feat_eco_track" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onCarbonClick" },
 ];
 
 export default function HomeOverlay({
