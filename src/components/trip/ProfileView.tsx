@@ -12,7 +12,7 @@ interface ProfileViewProps {
   onSettings?: () => void;
 }
 
-export default function ProfileView({ user, savedTrips, onViewTrip, onDeleteTrip, onLogout, onGenerateStory }: ProfileViewProps) {
+export default function ProfileView({ user, savedTrips, onViewTrip, onDeleteTrip, onLogout, onGenerateStory, onSettings }: ProfileViewProps) {
   return (
     <div className="h-full flex flex-col">
       {/* Profile Header */}
