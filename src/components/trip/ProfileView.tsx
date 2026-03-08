@@ -53,48 +53,49 @@ export default function ProfileView({ user, savedTrips, onViewTrip, onDeleteTrip
         ) : (
           <div className="space-y-3">
             {savedTrips.map((trip, i) => (
-              <motion.div
-                key={trip.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                className="bg-card rounded-2xl p-4 ts-shadow-card border border-border"
-              >
-                <div className="flex items-start justify-between mb-2">
-                  <div className="flex-1">
-                    <p className="text-sm font-bold text-foreground">{trip.data.title}</p>
-                    <p className="text-[10px] text-muted-foreground mt-0.5">📅 {trip.date} • {trip.places.length} places</p>
+              <SwipeToDelete key={trip.id} onDelete={() => onDeleteTrip(trip.id)}>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="bg-card rounded-2xl p-4 ts-shadow-card border border-border"
+                >
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex-1">
+                      <p className="text-sm font-bold text-foreground">{trip.data.title}</p>
+                      <p className="text-[10px] text-muted-foreground mt-0.5">📅 {trip.date} • {trip.places.length} places</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {trip.places.slice(0, 3).map(p => (
-                    <span key={p} className="text-[9px] bg-primary/10 text-primary font-bold px-2 py-0.5 rounded-md">{p}</span>
-                  ))}
-                  {trip.places.length > 3 && (
-                    <span className="text-[9px] bg-muted text-muted-foreground font-bold px-2 py-0.5 rounded-md">+{trip.places.length - 3} more</span>
-                  )}
-                </div>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => onViewTrip(trip)}
-                    className="flex-1 bg-primary/10 text-primary text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition active:scale-95"
-                  >
-                    <Eye className="w-3.5 h-3.5" /> View
-                  </button>
-                  <button
-                    onClick={() => onGenerateStory(trip)}
-                    className="flex-1 bg-ts-saffron/10 text-ts-saffron text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition active:scale-95"
-                  >
-                    <BookOpen className="w-3.5 h-3.5" /> Story
-                  </button>
-                  <button
-                    onClick={() => onDeleteTrip(trip.id)}
-                    className="bg-destructive/10 text-destructive p-2.5 rounded-xl transition active:scale-95"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                  </button>
-                </div>
-              </motion.div>
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {trip.places.slice(0, 3).map(p => (
+                      <span key={p} className="text-[9px] bg-primary/10 text-primary font-bold px-2 py-0.5 rounded-md">{p}</span>
+                    ))}
+                    {trip.places.length > 3 && (
+                      <span className="text-[9px] bg-muted text-muted-foreground font-bold px-2 py-0.5 rounded-md">+{trip.places.length - 3} more</span>
+                    )}
+                  </div>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => onViewTrip(trip)}
+                      className="flex-1 bg-primary/10 text-primary text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-1.5 ts-touch-btn"
+                    >
+                      <Eye className="w-3.5 h-3.5" /> View
+                    </button>
+                    <button
+                      onClick={() => onGenerateStory(trip)}
+                      className="flex-1 bg-ts-saffron/10 text-ts-saffron text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-1.5 ts-touch-btn"
+                    >
+                      <BookOpen className="w-3.5 h-3.5" /> Story
+                    </button>
+                    <button
+                      onClick={() => onDeleteTrip(trip.id)}
+                      className="bg-destructive/10 text-destructive p-2.5 rounded-xl ts-touch-btn"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </motion.div>
+              </SwipeToDelete>
             ))}
           </div>
         )}
