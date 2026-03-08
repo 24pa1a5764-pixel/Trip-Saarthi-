@@ -110,7 +110,7 @@ export default function HomeOverlay({
       <motion.div initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.05 }} className="px-5 pb-4 pt-2">
         <button onClick={onSearch} className="w-full flex items-center gap-3 bg-card rounded-2xl px-4 py-3.5 ts-shadow-card border border-border">
           <Search className="w-4 h-4 text-muted-foreground" />
-          <span className="text-sm text-muted-foreground font-medium flex-1 text-left">Search destinations, food, activities...</span>
+          <span className="text-sm text-muted-foreground font-medium flex-1 text-left">{t("search_placeholder")}</span>
           <div className="bg-muted px-2 py-1 rounded-lg"><span className="text-[9px] font-bold text-muted-foreground">AI</span></div>
         </button>
       </motion.div>
