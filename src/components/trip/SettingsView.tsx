@@ -161,7 +161,7 @@ export default function SettingsView({ onBack }: SettingsViewProps) {
                     <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
                       <MapPin className="w-4 h-4 text-primary" />
                     </div>
-                    <p className="text-sm text-foreground">Trip Reminders</p>
+                    <p className="text-sm text-foreground">{t("trip_reminders")}</p>
                   </div>
                   <Switch
                     checked={tripReminders}
