@@ -260,6 +260,7 @@ export default function Index() {
                     onDigitalPassportClick={() => setSubView("digital_passport")}
                     onSunriseSunsetClick={() => setSubView("sunrise_sunset")}
                     onTravelChallengeClick={() => setSubView("travel_challenge")}
+                    onVoiceAssistantClick={() => setSubView("voice_assistant")}
                   />
                 )}
                 {subView === "search" && (
