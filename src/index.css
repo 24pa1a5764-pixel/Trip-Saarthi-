@@ -150,4 +150,38 @@
   .ts-scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Touch-optimized button: active scale + highlight removal */
+  .ts-touch-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .ts-touch-btn:active {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+
+  /* Touch-optimized card with subtle press effect */
+  .ts-touch-card {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .ts-touch-card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Global mobile touch improvements */
+@media (hover: none) and (pointer: coarse) {
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Larger touch targets on mobile */
+  button:not(.ts-no-min-touch) {
+    min-height: 44px;
+  }
 }
