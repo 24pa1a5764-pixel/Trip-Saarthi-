@@ -6,6 +6,8 @@ import {
   AlertTriangle, Wand2, ChevronLeft, ChevronRight, Compass, Settings
 } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
+import type { TranslationKey } from "@/lib/translations";
 
 interface DesktopSidebarProps {
   activeTab: string;
@@ -17,24 +19,24 @@ interface DesktopSidebarProps {
 }
 
 const mainNav = [
-  { id: "home", icon: Home, label: "Home" },
-  { id: "discover", icon: Map, label: "Discover" },
-  { id: "community", icon: Users, label: "Community" },
-  { id: "chat", icon: MessageCircle, label: "Saarthi AI" },
-  { id: "profile", icon: UserCircle, label: "Profile" },
+  { id: "home", icon: Home, labelKey: "nav_home" as TranslationKey },
+  { id: "discover", icon: Map, labelKey: "nav_discover" as TranslationKey },
+  { id: "community", icon: Users, labelKey: "nav_community" as TranslationKey },
+  { id: "chat", icon: MessageCircle, labelKey: "nav_chat" as TranslationKey },
+  { id: "profile", icon: UserCircle, labelKey: "nav_profile" as TranslationKey },
 ];
 
 const features = [
-  { id: "food_finder", icon: Utensils, label: "Food Finder", color: "text-ts-rose", bg: "bg-ts-rose/10" },
-  { id: "weather", icon: CloudSun, label: "Weather", color: "text-ts-sky", bg: "bg-ts-sky/10" },
-  { id: "mood", icon: Palette, label: "Mood Match", color: "text-ts-purple", bg: "bg-ts-purple/10" },
-  { id: "hidden_gems", icon: Gem, label: "Hidden Gems", color: "text-ts-sky", bg: "bg-ts-sky/10" },
-  { id: "badges", icon: Medal, label: "Badges", color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
-  { id: "transport", icon: Bus, label: "Transport", color: "text-ts-green", bg: "bg-ts-green/10" },
-  { id: "festivals", icon: PartyPopper, label: "Festivals", color: "text-ts-purple", bg: "bg-ts-purple/10" },
-  { id: "language", icon: Globe, label: "Translator", color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
-  { id: "photo_spots", icon: Camera, label: "Photo Spots", color: "text-ts-sky", bg: "bg-ts-sky/10" },
-  { id: "carbon", icon: Leaf, label: "Eco Track", color: "text-ts-green", bg: "bg-ts-green/10" },
+  { id: "food_finder", icon: Utensils, labelKey: "feat_food_finder" as TranslationKey, color: "text-ts-rose", bg: "bg-ts-rose/10" },
+  { id: "weather", icon: CloudSun, labelKey: "feat_weather" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10" },
+  { id: "mood", icon: Palette, labelKey: "feat_mood_match" as TranslationKey, color: "text-ts-purple", bg: "bg-ts-purple/10" },
+  { id: "hidden_gems", icon: Gem, labelKey: "feat_hidden_gems" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10" },
+  { id: "badges", icon: Medal, labelKey: "feat_badges" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
+  { id: "transport", icon: Bus, labelKey: "feat_transport" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10" },
+  { id: "festivals", icon: PartyPopper, labelKey: "feat_festivals" as TranslationKey, color: "text-ts-purple", bg: "bg-ts-purple/10" },
+  { id: "language", icon: Globe, labelKey: "feat_translator" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10" },
+  { id: "photo_spots", icon: Camera, labelKey: "feat_photo_spots" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10" },
+  { id: "carbon", icon: Leaf, labelKey: "feat_eco_track" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10" },
 ];
 
 export default function DesktopSidebar({
