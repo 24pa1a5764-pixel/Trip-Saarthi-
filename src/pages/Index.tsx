@@ -178,9 +178,29 @@ export default function Index() {
     );
   }
 
+  const handleSidebarFeature = (feature: string) => {
+    setActiveTab("home");
+    setSubView(feature);
+  };
+
+  const handleSidebarTab = (tab: string) => {
+    setActiveTab(tab);
+    if (tab === "home") setSubView("home");
+  };
+
   return (
-    <div className="fixed inset-0 bg-background flex items-center justify-center">
-      <div className="w-full h-full bg-background flex flex-col relative overflow-hidden md:max-w-5xl md:shadow-2xl md:rounded-none">
+    <div className="fixed inset-0 bg-background flex">
+      {/* Desktop Sidebar */}
+      <DesktopSidebar
+        activeTab={activeTab}
+        setActiveTab={handleSidebarTab}
+        onFeatureClick={handleSidebarFeature}
+        onSafetyClick={() => setSafetyModalOpen(true)}
+        onEmergencyClick={() => setEmergencyOpen(true)}
+        cartCount={cart.length}
+      />
+
+      <div className="flex-1 h-full bg-background flex flex-col relative overflow-hidden">
         <div className="flex-1 overflow-hidden relative">
           <div className="relative z-10 h-full">
             {activeTab === "home" && (
