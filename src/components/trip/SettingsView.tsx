@@ -113,7 +113,7 @@ export default function SettingsView({ onBack }: SettingsViewProps) {
                   <Globe className="w-4.5 h-4.5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-foreground">App Language</p>
+                  <p className="text-sm font-semibold text-foreground">{t("app_language")}</p>
                   <p className="text-[10px] text-muted-foreground">
                     {currentLang?.label} ({currentLang?.native})
                   </p>
