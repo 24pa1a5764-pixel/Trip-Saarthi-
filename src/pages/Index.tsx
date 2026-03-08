@@ -356,6 +356,7 @@ export default function Index() {
               />
             )}
           </div>
+          </SwipeableTabs>
         </div>
 
         <AnimatePresence>
