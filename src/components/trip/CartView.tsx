@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, MapPin, Trash2, Wand2, Briefcase, ChevronRight, Star, TrendingDown, Leaf } from "lucide-react";
 import type { Place } from "@/lib/tripData";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface CartViewProps {
   cart: Place[];
