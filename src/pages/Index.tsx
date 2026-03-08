@@ -126,12 +126,12 @@ export default function Index() {
   const saveTrip = async () => {
     if (!itineraryResult || itineraryResult.isPacking || !user) return;
     
-    const { error } = await supabase.from("saved_trips").insert({
+    const { error } = await supabase.from("saved_trips").insert([{
       user_id: user.id,
       title: itineraryResult.title,
       places: cart.map((c) => c.name),
       trip_data: itineraryResult as unknown as Record<string, unknown>,
-    });
+    }]);
 
     if (error) {
       alert("Failed to save trip: " + error.message);
