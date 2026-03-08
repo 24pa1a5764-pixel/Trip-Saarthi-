@@ -351,6 +351,42 @@ export default function Index() {
                 {subView === "settings" && (
                   <SettingsView onBack={() => setSubView("home")} />
                 )}
+                {subView === "scam_alert" && (
+                  <ScamAlertView onBack={() => setSubView("home")} />
+                )}
+                {subView === "time_optimizer" && (
+                  <TimeOptimizerView onBack={() => setSubView("home")} />
+                )}
+                {subView === "solo_safety" && (
+                  <SoloSafetyView onBack={() => setSubView("home")} />
+                )}
+                {subView === "personality" && (
+                  <PersonalityAnalyzerView onBack={() => setSubView("home")} />
+                )}
+                {subView === "skill_experience" && (
+                  <SkillExperienceView onBack={() => setSubView("home")} />
+                )}
+                {subView === "air_quality" && (
+                  <AirQualityView onBack={() => setSubView("home")} />
+                )}
+                {subView === "lost_item" && (
+                  <LostItemFinderView onBack={() => setSubView("home")} />
+                )}
+                {subView === "rest_stop" && (
+                  <RestStopFinderView onBack={() => setSubView("home")} />
+                )}
+                {subView === "travel_risk" && (
+                  <TravelRiskView onBack={() => setSubView("home")} />
+                )}
+                {subView === "digital_passport" && (
+                  <DigitalPassportView onBack={() => setSubView("home")} savedTripsCount={savedTrips.length} />
+                )}
+                {subView === "sunrise_sunset" && (
+                  <SunriseSunsetView onBack={() => setSubView("home")} />
+                )}
+                {subView === "travel_challenge" && (
+                  <TravelChallengeView onBack={() => setSubView("home")} />
+                )}
               </>
             )}
 
