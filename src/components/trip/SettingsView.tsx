@@ -86,8 +86,8 @@ export default function SettingsView({ onBack }: SettingsViewProps) {
                   </div>
                 )}
                 <div>
-                  <p className="text-sm font-semibold text-foreground">Dark Mode</p>
-                  <p className="text-[10px] text-muted-foreground">{theme === "dark" ? "Currently dark" : "Currently light"}</p>
+                  <p className="text-sm font-semibold text-foreground">{t("dark_mode")}</p>
+                  <p className="text-[10px] text-muted-foreground">{theme === "dark" ? t("currently_dark") : t("currently_light")}</p>
                 </div>
               </div>
               <Switch checked={theme === "dark"} onCheckedChange={toggleTheme} />
