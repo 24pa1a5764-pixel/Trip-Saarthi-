@@ -352,7 +352,10 @@ export default function Index() {
 
         <EmergencyButton isOpen={emergencyOpen} onClose={() => setEmergencyOpen(false)} />
 
-        <BottomNav active={activeTab} setActive={(tab) => { setActiveTab(tab); if (tab === "home") setSubView("home"); }} cartCount={cart.length} />
+        {/* Bottom nav - mobile only */}
+        <div className="md:hidden">
+          <BottomNav active={activeTab} setActive={(tab) => { setActiveTab(tab); if (tab === "home") setSubView("home"); }} cartCount={cart.length} />
+        </div>
       </div>
     </div>
   );
