@@ -43,14 +43,14 @@ export default function ProfileView({ user, savedTrips, onViewTrip, onDeleteTrip
       </div>
 
       <div className="flex-1 overflow-y-auto px-5 py-4 ts-scrollbar-hide">
-        <h3 className="text-xs font-bold text-muted-foreground uppercase mb-3">Saved Trips</h3>
+        <h3 className="text-xs font-bold text-muted-foreground uppercase mb-3">{t("saved_trips")}</h3>
         {savedTrips.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-center">
             <div className="w-16 h-16 rounded-3xl bg-muted flex items-center justify-center mb-3">
               <Compass className="w-8 h-8 text-muted-foreground/20" />
             </div>
-            <p className="text-sm font-bold text-foreground mb-1">No saved trips yet</p>
-            <p className="text-xs text-muted-foreground">Plan your first adventure to see it here!</p>
+            <p className="text-sm font-bold text-foreground mb-1">{t("no_saved_trips")}</p>
+            <p className="text-xs text-muted-foreground">{t("no_saved_trips_desc")}</p>
           </div>
         ) : (
           <div className="space-y-3">
