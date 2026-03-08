@@ -40,7 +40,7 @@ export const MOCK_DATA: Record<string, Place[]> = {
     { name: "Sardar Market", loc: "Jodhpur", img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80", lat: 26.2960, lng: 73.0209, rating: 4.3, duration: "2-3 hrs", price: "₹100-300", description: "Rajasthani snacks near the iconic Clock Tower" },
   ],
   adventure: [
-    { name: "Rishikesh Rafting", loc: "Uttarakhand", img: "https://images.unsplash.com/photo-1530866495561-507c83d15e30?w=400&q=80", lat: 30.0869, lng: 78.2676, rating: 4.7, duration: "3-4 hrs", price: "₹1000+", description: "White water rafting on the holy Ganges river" },
+    { name: "Rishikesh Rafting", loc: "Uttarakhand", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&q=80", lat: 30.0869, lng: 78.2676, rating: 4.7, duration: "3-4 hrs", price: "₹1000+", description: "White water rafting on the holy Ganges river" },
     { name: "Manali Paragliding", loc: "Himachal", img: "https://images.unsplash.com/photo-1503435824048-a799a3a84bf7?w=400&q=80", lat: 32.2396, lng: 77.1887, rating: 4.6, duration: "1-2 hrs", price: "₹2500+", description: "Soar over Kullu Valley with Himalayan views" },
     { name: "Goa Water Sports", loc: "Goa", img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80", lat: 15.2993, lng: 74.1240, rating: 4.4, duration: "Half day", price: "₹800+", description: "Jet ski, banana boat, parasailing on golden beaches" },
   ],
