@@ -122,7 +122,7 @@ export default function DesktopSidebar({
           className={`w-full flex items-center ${collapsed ? "justify-center" : "gap-3 px-3"} py-2 rounded-xl text-muted-foreground hover:bg-ts-saffron/10 hover:text-ts-saffron transition`}
         >
           <ShieldAlert className="w-4 h-4 text-ts-saffron shrink-0" />
-          {!collapsed && <span className="text-[11px] font-medium">Safety Info</span>}
+          {!collapsed && <span className="text-[11px] font-medium">{t("safety_info")}</span>}
         </button>
         <button
           onClick={onEmergencyClick}
