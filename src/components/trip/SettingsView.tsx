@@ -12,6 +12,7 @@ interface SettingsViewProps {
 
 export default function SettingsView({ onBack }: SettingsViewProps) {
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation();
   const { language, notificationsEnabled, tripReminders, safetyAlerts, communityUpdates, updateSetting } = useSettings();
   const [showLangPicker, setShowLangPicker] = useState(false);
 
