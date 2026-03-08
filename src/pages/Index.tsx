@@ -6,6 +6,7 @@ import SplashScreen from "@/components/trip/SplashScreen";
 import AuthScreen from "@/components/trip/AuthScreen";
 import OnboardingScreen from "@/components/trip/OnboardingScreen";
 import BottomNav from "@/components/trip/BottomNav";
+import DesktopSidebar from "@/components/trip/DesktopSidebar";
 import HomeOverlay from "@/components/trip/HomeOverlay";
 import GlobalSearch from "@/components/trip/GlobalSearch";
 import PlannerView from "@/components/trip/PlannerView";
