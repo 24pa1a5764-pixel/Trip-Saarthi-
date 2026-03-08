@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import {
   Search, Landmark, Sunset, Coffee, Briefcase, ShieldAlert,
   ChevronRight, Wand2, Star, Zap, TrendingUp, Mountain,
-  Heart, Gem, Users, Palette, AlertTriangle, Leaf
+  Heart, Gem, Users, Palette, AlertTriangle, Leaf,
+  Utensils, CloudSun, Medal, Bus, PartyPopper, Globe, Camera
 } from "lucide-react";
 import type { UserData, Place } from "@/lib/tripData";
 import { MOCK_DATA } from "@/lib/tripData";
