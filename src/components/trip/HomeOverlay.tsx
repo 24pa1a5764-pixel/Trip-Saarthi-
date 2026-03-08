@@ -22,6 +22,13 @@ interface HomeOverlayProps {
   onEmergencyClick: () => void;
   onBudgetClick: () => void;
   onCarbonClick: () => void;
+  onFoodFinderClick: () => void;
+  onWeatherClick: () => void;
+  onBadgesClick: () => void;
+  onTransportClick: () => void;
+  onFestivalsClick: () => void;
+  onLanguageClick: () => void;
+  onPhotoSpotsClick: () => void;
 }
 
 const categories = [
