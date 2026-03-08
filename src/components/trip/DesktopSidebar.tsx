@@ -3,7 +3,7 @@ import {
   Home, Map, Users, MessageCircle, UserCircle,
   Utensils, CloudSun, Palette, Gem, Medal, Bus,
   PartyPopper, Globe, Camera, Leaf, ShieldAlert,
-  AlertTriangle, Wand2, ChevronLeft, ChevronRight, Compass
+  AlertTriangle, Wand2, ChevronLeft, ChevronRight, Compass, Settings
 } from "lucide-react";
 import { useState } from "react";
 
