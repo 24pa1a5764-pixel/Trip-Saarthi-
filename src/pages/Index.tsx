@@ -51,6 +51,7 @@ import TravelRiskView from "@/components/trip/TravelRiskView";
 import DigitalPassportView from "@/components/trip/DigitalPassportView";
 import SunriseSunsetView from "@/components/trip/SunriseSunsetView";
 import TravelChallengeView from "@/components/trip/TravelChallengeView";
+import VoiceAssistantView from "@/components/trip/VoiceAssistantView";
 import {
   generateMockItinerary,
   generateMockPackingList,
@@ -259,6 +260,7 @@ export default function Index() {
                     onDigitalPassportClick={() => setSubView("digital_passport")}
                     onSunriseSunsetClick={() => setSubView("sunrise_sunset")}
                     onTravelChallengeClick={() => setSubView("travel_challenge")}
+                    onVoiceAssistantClick={() => setSubView("voice_assistant")}
                   />
                 )}
                 {subView === "search" && (
@@ -386,6 +388,9 @@ export default function Index() {
                 )}
                 {subView === "travel_challenge" && (
                   <TravelChallengeView onBack={() => setSubView("home")} />
+                )}
+                {subView === "voice_assistant" && (
+                  <VoiceAssistantView onBack={() => setSubView("home")} />
                 )}
               </>
             )}
