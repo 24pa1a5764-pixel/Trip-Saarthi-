@@ -125,7 +125,7 @@ export default function HomeOverlay({
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_80%_20%,white_0%,transparent_60%)]" />
               <div className="absolute top-3 right-3 bg-primary-foreground/10 backdrop-blur-sm px-2.5 py-1 rounded-full flex items-center gap-1">
                 <Zap className="w-3 h-3 text-primary-foreground" />
-                <span className="text-[10px] text-primary-foreground font-bold">AI Powered</span>
+                <span className="text-[10px] text-primary-foreground font-bold">{t("ai_powered")}</span>
               </div>
               <div className="relative z-10">
                 <h2 className="text-lg md:text-xl font-display font-bold text-primary-foreground mb-0.5">Plan Your Dream Trip</h2>
