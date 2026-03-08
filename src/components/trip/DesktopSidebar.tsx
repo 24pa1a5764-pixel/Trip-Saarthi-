@@ -77,7 +77,7 @@ export default function DesktopSidebar({
               className={`w-full flex items-center ${collapsed ? "justify-center" : "gap-3 px-3"} py-2.5 rounded-xl transition text-left ${isActive ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
             >
               <Icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? "text-primary" : ""}`} />
-              {!collapsed && <span className={`text-xs font-medium ${isActive ? "font-bold" : ""}`}>{item.label}</span>}
+              {!collapsed && <span className={`text-xs font-medium ${isActive ? "font-bold" : ""}`}>{t(item.labelKey)}</span>}
               {!collapsed && item.id === "home" && cartCount > 0 && (
                 <span className="ml-auto text-[9px] font-bold bg-primary text-primary-foreground w-5 h-5 rounded-full flex items-center justify-center">{cartCount}</span>
               )}
