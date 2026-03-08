@@ -14,6 +14,7 @@ interface CartViewProps {
 }
 
 export default function CartView({ cart, toggleCart, onBack, onGenerateItinerary, onGeneratePacking, onBudgetOptimizer, onCarbonFootprint }: CartViewProps) {
+  const { t } = useTranslation();
   const uniqueLocations = [...new Set(cart.map(p => p.loc))];
 
   return (
