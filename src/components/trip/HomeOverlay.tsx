@@ -200,7 +200,7 @@ export default function HomeOverlay({
                 <span className="text-3xl">☀️</span>
                 <div>
                   <p className="text-xs font-bold text-foreground">38°C - Delhi</p>
-                  <p className="text-[10px] text-muted-foreground">Heat wave alert! Tap for details</p>
+                  <p className="text-[10px] text-muted-foreground">{t("heat_wave_alert")}</p>
                 </div>
               </div>
             </button>
