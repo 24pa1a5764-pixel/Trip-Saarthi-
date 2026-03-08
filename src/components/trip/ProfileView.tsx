@@ -109,7 +109,7 @@ export default function ProfileView({ user, savedTrips, onViewTrip, onDeleteTrip
             onClick={onSettings}
             className="w-full bg-primary/10 text-primary font-bold py-3.5 rounded-2xl text-sm flex items-center justify-center gap-2 transition active:scale-95"
           >
-            <Settings className="w-4 h-4" /> Settings
+            <Settings className="w-4 h-4" /> {t("settings")}
           </button>
         )}
         <button
