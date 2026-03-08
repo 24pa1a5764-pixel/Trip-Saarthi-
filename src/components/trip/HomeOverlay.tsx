@@ -44,6 +44,8 @@ const trending: Place[] = [
   MOCK_DATA.heritage[0],
   MOCK_DATA.nature[1],
   MOCK_DATA.adventure?.[0],
+  MOCK_DATA.heritage[2],
+  MOCK_DATA.nature[2],
 ].filter(Boolean) as Place[];
 
 export default function HomeOverlay({
