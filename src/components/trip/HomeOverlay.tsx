@@ -165,7 +165,7 @@ export default function HomeOverlay({
           <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.15 }} className="space-y-3">
             {/* Trip stats */}
             <div className="bg-card rounded-2xl ts-shadow-card border border-border p-4">
-              <h4 className="text-xs font-bold text-foreground mb-3">Quick Stats</h4>
+              <h4 className="text-xs font-bold text-foreground mb-3">{t("quick_stats")}</h4>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-ts-saffron/10 rounded-xl p-3 text-center">
                   <p className="text-lg font-bold text-ts-saffron">{cartCount}</p>
