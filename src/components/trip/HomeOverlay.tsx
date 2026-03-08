@@ -44,6 +44,7 @@ interface HomeOverlayProps {
   onDigitalPassportClick: () => void;
   onSunriseSunsetClick: () => void;
   onTravelChallengeClick: () => void;
+  onVoiceAssistantClick: () => void;
 }
 
 const categories = [
