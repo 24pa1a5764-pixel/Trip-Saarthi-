@@ -152,7 +152,7 @@ export default function HomeOverlay({
                   <motion.button key={cat.id} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.2 + i * 0.03 }}
                     onClick={() => onCategoryClick(cat.id)} className="flex flex-col items-center gap-2 bg-card p-3 rounded-2xl ts-shadow-card border border-border active:scale-95 transition">
                     <div className={`${cat.bg} p-2.5 rounded-xl`}><Icon className={`w-5 h-5 ${cat.color}`} /></div>
-                    <span className="text-[10px] font-bold text-foreground">{cat.label}</span>
+                    <span className="text-[10px] font-bold text-foreground">{t(cat.labelKey)}</span>
                   </motion.button>
                 );
               })}
