@@ -38,6 +38,7 @@ import FestivalEventsView from "@/components/trip/FestivalEventsView";
 import LanguageAssistantView from "@/components/trip/LanguageAssistantView";
 import PhotoSpotFinderView from "@/components/trip/PhotoSpotFinderView";
 import SettingsView from "@/components/trip/SettingsView";
+import SwipeableTabs from "@/components/trip/SwipeableTabs";
 import {
   generateMockItinerary,
   generateMockPackingList,
