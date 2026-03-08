@@ -204,6 +204,12 @@ export default function Index() {
 
       <div className="flex-1 h-full bg-background flex flex-col relative overflow-hidden">
         <div className="flex-1 overflow-hidden relative">
+          <SwipeableTabs
+            tabIds={["home", "discover", "community", "chat", "profile"]}
+            activeTab={activeTab}
+            onTabChange={(tab) => { setActiveTab(tab); if (tab === "home") setSubView("home"); }}
+            enabled={subView === "home" || activeTab !== "home"}
+          >
           <div className="relative z-10 h-full">
             {activeTab === "home" && (
               <>
