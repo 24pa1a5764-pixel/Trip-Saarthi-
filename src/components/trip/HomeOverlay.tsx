@@ -270,7 +270,7 @@ export default function HomeOverlay({
         <motion.div initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="fixed bottom-24 md:bottom-6 left-1/2 -translate-x-1/2 z-30">
           <button onClick={onCartClick} className="ts-gradient-hero text-primary-foreground px-6 py-3.5 rounded-2xl ts-shadow-elevated flex items-center gap-3 font-bold text-sm active:scale-95 transition">
             <span className="bg-primary-foreground/20 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black">{cartCount}</span>
-            <span>View Trip Chart</span>
+            <span>{t("view_trip_chart")}</span>
             <ChevronRight className="w-4 h-4" />
           </button>
         </motion.div>
