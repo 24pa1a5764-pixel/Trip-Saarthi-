@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Sun, Moon, Bell, BellOff, Globe, ChevronRight, Check, Shield, Users, MapPin } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useSettings, LANGUAGES } from "@/hooks/useSettings";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
 
