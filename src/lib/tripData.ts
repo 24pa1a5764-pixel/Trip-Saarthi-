@@ -13,7 +13,7 @@ export interface Place {
 
 export const MOCK_DATA: Record<string, Place[]> = {
   heritage: [
-    { name: "Taj Mahal", loc: "Agra", img: "https://images.unsplash.com/photo-1564507592209-4b471c0df1b8?w=400&q=80", lat: 27.1751, lng: 78.0421, rating: 4.9, duration: "3-4 hrs", price: "₹50", description: "UNESCO World Heritage Site, one of the seven wonders of the world" },
+    { name: "Taj Mahal", loc: "Agra", img: "https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80", lat: 27.1751, lng: 78.0421, rating: 4.9, duration: "3-4 hrs", price: "₹50", description: "UNESCO World Heritage Site, one of the seven wonders of the world" },
     { name: "Lotus Temple", loc: "Delhi", img: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&q=80", lat: 28.5535, lng: 77.2588, rating: 4.5, duration: "1-2 hrs", price: "Free", description: "Bahá'í House of Worship, stunning lotus-shaped architecture" },
     { name: "Hawa Mahal", loc: "Jaipur", img: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=400&q=80", lat: 26.9239, lng: 75.8267, rating: 4.6, duration: "1-2 hrs", price: "₹50", description: "Palace of Winds with 953 small windows" },
     { name: "Golden Temple", loc: "Amritsar", img: "https://images.unsplash.com/photo-1589136142558-132d757d5494?w=400&q=80", lat: 31.6200, lng: 74.8765, rating: 4.9, duration: "2-3 hrs", price: "Free", description: "Holiest Gurdwara and spiritual center of Sikhism" },
