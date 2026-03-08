@@ -180,16 +180,16 @@ export default function HomeOverlay({
 
             {/* Quick actions */}
             <div className="bg-card rounded-2xl ts-shadow-card border border-border p-4">
-              <h4 className="text-xs font-bold text-foreground mb-3">Quick Actions</h4>
+              <h4 className="text-xs font-bold text-foreground mb-3">{t("quick_actions")}</h4>
               <div className="space-y-2">
                 <button onClick={onStartJourney} className="w-full flex items-center gap-2 bg-primary/10 text-primary px-3 py-2.5 rounded-xl text-xs font-bold active:scale-95 transition">
-                  <Wand2 className="w-3.5 h-3.5" /> Plan New Trip
+                  <Wand2 className="w-3.5 h-3.5" /> {t("plan_new_trip")}
                 </button>
                 <button onClick={onCartClick} className="w-full flex items-center gap-2 bg-muted px-3 py-2.5 rounded-xl text-xs font-medium text-foreground active:scale-95 transition">
-                  <Heart className="w-3.5 h-3.5 text-ts-rose" /> View Cart ({cartCount})
+                  <Heart className="w-3.5 h-3.5 text-ts-rose" /> {t("view_cart")} ({cartCount})
                 </button>
                 <button onClick={onBudgetClick} className="w-full flex items-center gap-2 bg-muted px-3 py-2.5 rounded-xl text-xs font-medium text-foreground active:scale-95 transition">
-                  <TrendingUp className="w-3.5 h-3.5 text-ts-green" /> Budget Optimizer
+                  <TrendingUp className="w-3.5 h-3.5 text-ts-green" /> {t("budget_optimizer")}
                 </button>
               </div>
             </div>
