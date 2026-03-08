@@ -144,8 +144,8 @@ export default function SettingsView({ onBack }: SettingsViewProps) {
                   )}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">Notifications</p>
-                  <p className="text-[10px] text-muted-foreground">{notificationsEnabled ? "Enabled" : "Disabled"}</p>
+                  <p className="text-sm font-semibold text-foreground">{t("notifications")}</p>
+                  <p className="text-[10px] text-muted-foreground">{notificationsEnabled ? t("enabled") : t("disabled")}</p>
                 </div>
               </div>
               <Switch
