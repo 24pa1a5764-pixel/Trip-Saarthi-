@@ -103,7 +103,7 @@ export default function DesktopSidebar({
               <div className={`${feat.bg} p-1.5 rounded-lg shrink-0`}>
                 <Icon className={`w-3.5 h-3.5 ${feat.color}`} />
               </div>
-              {!collapsed && <span className="text-[11px] font-medium">{feat.label}</span>}
+              {!collapsed && <span className="text-[11px] font-medium">{t(feat.labelKey)}</span>}
             </button>
           );
         })}
