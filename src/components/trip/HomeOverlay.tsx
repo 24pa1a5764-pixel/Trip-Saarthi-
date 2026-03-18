@@ -81,19 +81,19 @@ const quickFeatures = [
   { icon: Camera, labelKey: "feat_photo_spots" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onPhotoSpotsClick" },
   { icon: Users, labelKey: "feat_community" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onCommunityClick" },
   { icon: Leaf, labelKey: "feat_eco_track" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onCarbonClick" },
-  { icon: AlertOctagon, label: "Scam Alerts", color: "text-destructive", bg: "bg-destructive/10", key: "onScamAlertClick" },
-  { icon: Clock, label: "Time Optimizer", color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onTimeOptimizerClick" },
-  { icon: Compass, label: "Solo Safety", color: "text-ts-green", bg: "bg-ts-green/10", key: "onSoloSafetyClick" },
-  { icon: Brain, label: "Personality", color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onPersonalityClick" },
-  { icon: Palette, label: "Experiences", color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onSkillExperienceClick" },
-  { icon: Wind, label: "Air Quality", color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onAirQualityClick" },
-  { icon: Luggage, label: "Lost & Found", color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onLostItemClick" },
-  { icon: MapPin, label: "Rest Stops", color: "text-ts-green", bg: "bg-ts-green/10", key: "onRestStopClick" },
-  { icon: BarChart3, label: "Risk Score", color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onTravelRiskClick" },
-  { icon: Globe, label: "Passport", color: "text-primary", bg: "bg-primary/10", key: "onDigitalPassportClick" },
-  { icon: Sunrise, label: "Sunrise/Set", color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onSunriseSunsetClick" },
-  { icon: Target, label: "Challenges", color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onTravelChallengeClick" },
-  { icon: Mic, label: "Voice Guide", color: "text-primary", bg: "bg-primary/10", key: "onVoiceAssistantClick" },
+  { icon: AlertOctagon, labelKey: "feat_scam_alerts" as TranslationKey, color: "text-destructive", bg: "bg-destructive/10", key: "onScamAlertClick" },
+  { icon: Clock, labelKey: "feat_time_optimizer" as TranslationKey, color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onTimeOptimizerClick" },
+  { icon: Compass, labelKey: "feat_solo_safety" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onSoloSafetyClick" },
+  { icon: Brain, labelKey: "feat_personality" as TranslationKey, color: "text-ts-purple", bg: "bg-ts-purple/10", key: "onPersonalityClick" },
+  { icon: Palette, labelKey: "feat_experiences" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onSkillExperienceClick" },
+  { icon: Wind, labelKey: "feat_air_quality" as TranslationKey, color: "text-ts-sky", bg: "bg-ts-sky/10", key: "onAirQualityClick" },
+  { icon: Luggage, labelKey: "feat_lost_found" as TranslationKey, color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onLostItemClick" },
+  { icon: MapPin, labelKey: "feat_rest_stops" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onRestStopClick" },
+  { icon: BarChart3, labelKey: "feat_risk_score" as TranslationKey, color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onTravelRiskClick" },
+  { icon: Globe, labelKey: "feat_passport" as TranslationKey, color: "text-primary", bg: "bg-primary/10", key: "onDigitalPassportClick" },
+  { icon: Sunrise, labelKey: "feat_sunrise_set" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onSunriseSunsetClick" },
+  { icon: Target, labelKey: "feat_challenges" as TranslationKey, color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onTravelChallengeClick" },
+  { icon: Mic, labelKey: "feat_voice_guide" as TranslationKey, color: "text-primary", bg: "bg-primary/10", key: "onVoiceAssistantClick" },
 ];
 
 export default function HomeOverlay({
@@ -254,7 +254,7 @@ export default function HomeOverlay({
               <motion.button key={feat.key} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.15 + i * 0.04 }}
                 onClick={featureClickMap[feat.key]} className="shrink-0 flex items-center gap-2 bg-card px-3.5 py-2.5 rounded-xl ts-shadow-card border border-border active:scale-95 transition">
                 <div className={`${feat.bg} p-1.5 rounded-lg`}><Icon className={`w-3.5 h-3.5 ${feat.color}`} /></div>
-                <span className="text-[10px] font-bold text-foreground whitespace-nowrap">{'labelKey' in feat ? t(feat.labelKey as TranslationKey) : (feat as any).label}</span>
+                <span className="text-[10px] font-bold text-foreground whitespace-nowrap">{t(feat.labelKey)}</span>
               </motion.button>
             );
           })}
