@@ -96,6 +96,8 @@ const quickFeatures = [
   { icon: Sunrise, labelKey: "feat_sunrise_set" as TranslationKey, color: "text-ts-saffron", bg: "bg-ts-saffron/10", key: "onSunriseSunsetClick" },
   { icon: Target, labelKey: "feat_challenges" as TranslationKey, color: "text-ts-rose", bg: "bg-ts-rose/10", key: "onTravelChallengeClick" },
   { icon: Mic, labelKey: "feat_voice_guide" as TranslationKey, color: "text-primary", bg: "bg-primary/10", key: "onVoiceAssistantClick" },
+  { icon: IndianRupee, labelKey: "feat_budget_tracker" as TranslationKey, color: "text-ts-green", bg: "bg-ts-green/10", key: "onBudgetTrackerClick" },
+  { icon: Phone, labelKey: "feat_fake_call" as TranslationKey, color: "text-destructive", bg: "bg-destructive/10", key: "onFakeCallClick" },
 ];
 
 export default function HomeOverlay({
