@@ -45,6 +45,8 @@ interface HomeOverlayProps {
   onSunriseSunsetClick: () => void;
   onTravelChallengeClick: () => void;
   onVoiceAssistantClick: () => void;
+  onBudgetTrackerClick: () => void;
+  onFakeCallClick: () => void;
 }
 
 const categories = [
