@@ -263,6 +263,8 @@ export default function Index() {
                     onSunriseSunsetClick={() => setSubView("sunrise_sunset")}
                     onTravelChallengeClick={() => setSubView("travel_challenge")}
                     onVoiceAssistantClick={() => setSubView("voice_assistant")}
+                    onBudgetTrackerClick={() => setSubView("budget_tracker")}
+                    onFakeCallClick={() => setSubView("fake_call")}
                   />
                 )}
                 {subView === "search" && (
