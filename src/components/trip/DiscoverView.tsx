@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
-  Landmark, MapPin, Briefcase, Utensils, Mountain, Star, Clock,
-  TrendingUp, ChevronRight, Search, Heart
+  Landmark, MapPin, Briefcase, Utensils, Mountain, Star, Clock, Heart
 } from "lucide-react";
 import { MOCK_DATA, flattenMockData, type Place } from "@/lib/tripData";
 import { useState, useMemo } from "react";
