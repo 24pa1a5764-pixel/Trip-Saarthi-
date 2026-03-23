@@ -46,12 +46,12 @@ export default function AuthScreen() {
     const result = await signInWithGoogle();
     if (result.error) {
       const raw = result.error;
-      if (/auth\/popup-closed-by-user/i.test(raw)) {
-        setError("Google sign-in was canceled. Please choose an account to continue.");
-      } else if (/auth\/operation-not-allowed/i.test(raw)) {
-        setError("Google provider is not enabled in Firebase Authentication.");
-      } else if (/auth\/unauthorized-domain/i.test(raw)) {
-        setError("This domain is not authorized in Firebase. Add localhost in Firebase Auth settings.");
+      if (/popup-closed-by-user|canceled/i.test(raw)) {
+        setError("Sign-in was canceled. Please try again.");
+      } else if (/not-allowed/i.test(raw)) {
+        setError("Google provider is not enabled in Supabase Auth settings.");
+      } else if (/unauthorized|invalid|configuration/i.test(raw)) {
+        setError("Redirect URL error: Ensure 'https' is used in Supabase & Google settings.");
       } else {
         setError(raw);
       }

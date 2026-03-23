@@ -140,15 +140,35 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signInWithGoogle = async () => {
     try {
+      // Create an absolute URL for redirection
+      const origin = window.location.origin;
+      const redirectTo = origin.includes('localhost') 
+        ? `${origin}/auth/callback` 
+        : `https://tripsaarthi138.vercel.app/auth/callback`;
+
+      console.log("Supabase Auth signing in via Google...");
+      console.log("Current Origin:", origin);
+      console.log("Redirecting to:", redirectTo);
+
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/`
+          redirectTo,
+          queryParams: {
+            access_type: 'offline',
+            prompt: 'consent',
+          },
         },
       });
 
-      return { error: error?.message || null };
+      if (error) {
+        console.error("Supabase OAuth Error:", error);
+        return { error: error.message };
+      }
+
+      return { error: null };
     } catch (e) {
+      console.error("Google sign-in catch block:", e);
       return {
         error: e instanceof Error ? e.message : "Google sign-in failed.",
       };
