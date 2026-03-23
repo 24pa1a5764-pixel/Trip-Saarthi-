@@ -2,9 +2,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 export default function Login() {
   const login = async () => {
-      const redirectTo = window.location.origin.includes('localhost') 
-        ? `${window.location.origin}/` 
-        : `https://tripsaarthi138.vercel.app/`;
+      const redirectTo = `${window.location.origin}/`;
 
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",

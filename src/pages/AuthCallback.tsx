@@ -8,12 +8,20 @@ export default function AuthCallback() {
 
   useEffect(() => {
     const handleCallback = async () => {
-      const { error } = await supabase.auth.getSession();
-      if (error) {
-        console.error("Auth callback error:", error.message);
+      try {
+        const { data, error } = await supabase.auth.getSession();
+        if (error) {
+          console.error("Auth callback error:", error.message);
+          // You might want to show an error message or redirect to login
+          navigate("/", { replace: true });
+          return;
+        }
+        // Redirect to home page after session is handled
+        navigate("/", { replace: true });
+      } catch (err) {
+        console.error("Auth callback unexpected error:", err);
+        navigate("/", { replace: true });
       }
-      // Redirect to home page after session is handled
-      navigate("/", { replace: true });
     };
 
     handleCallback();

@@ -142,9 +142,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
       // Create an absolute URL for redirection
       const origin = window.location.origin;
-      const redirectTo = origin.includes('localhost') 
-        ? `${origin}/auth/callback` 
-        : `https://tripsaarthi138.vercel.app/auth/callback`;
+      const redirectTo = `${origin}/auth/callback`;
 
       console.log("Supabase Auth signing in via Google...");
       console.log("Current Origin:", origin);

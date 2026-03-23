@@ -51,7 +51,9 @@ export default function AuthScreen() {
       } else if (/not-allowed/i.test(raw)) {
         setError("Google provider is not enabled in Supabase Auth settings.");
       } else if (/unauthorized|invalid|configuration/i.test(raw)) {
-        setError("Redirect URL error: Ensure 'https' is used in Supabase & Google settings.");
+        setError("Redirect URL error: Check Supabase Auth settings and ensure correct domain is configured.");
+      } else if (/requested path is invalid/i.test(raw)) {
+        setError("Invalid redirect path. Please check Supabase project configuration.");
       } else {
         setError(raw);
       }
