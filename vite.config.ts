@@ -13,6 +13,9 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  preview: {
+    allowedHosts: ["trip-saarthi-vken.onrender.com"],
+  },
   plugins: [
     react(),
     mode === "development" && componentTagger(),
@@ -54,5 +57,8 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    chunkSizeWarningLimit: 1600,
   },
 }));
