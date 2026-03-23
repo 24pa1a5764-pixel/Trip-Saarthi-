@@ -44,7 +44,7 @@ export default function SkillExperienceView({ onBack }: SkillExperienceViewProps
             <motion.div key={exp.name} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}
               className="bg-card rounded-2xl border border-border ts-shadow-card overflow-hidden">
               <div className="h-32 relative overflow-hidden">
-                <img src={exp.img} alt={exp.name} className="w-full h-full object-cover" loading="lazy" />
+                <img src={exp.img} alt={exp.name} className="w-full h-full object-cover" />
                 <span className={`absolute top-2 left-2 text-[9px] font-bold px-2 py-0.5 rounded-lg ${categoryColors[exp.category] || "bg-muted text-muted-foreground"}`}>{exp.category}</span>
               </div>
               <div className="p-3">

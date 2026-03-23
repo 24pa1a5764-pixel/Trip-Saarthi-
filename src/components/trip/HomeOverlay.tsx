@@ -302,7 +302,7 @@ export default function HomeOverlay({
               className="bg-card rounded-2xl ts-shadow-card border border-border overflow-hidden active:scale-[0.98] transition text-left"
             >
               <div className="w-full h-28 md:h-32 bg-muted relative overflow-hidden">
-                <img src={place.img} alt={place.name} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition duration-500" />
+                <img src={place.img} alt={place.name} className="w-full h-full object-cover hover:scale-105 transition duration-500" />
                 {place.category && (
                   <span className="absolute top-2 left-2 text-[8px] font-bold bg-foreground/50 text-primary-foreground px-2 py-0.5 rounded-lg backdrop-blur-sm capitalize">{place.category}</span>
                 )}

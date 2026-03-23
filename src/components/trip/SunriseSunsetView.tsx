@@ -32,7 +32,7 @@ export default function SunriseSunsetView({ onBack }: SunriseSunsetViewProps) {
           <motion.div key={spot.name} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}
             className="bg-card rounded-2xl border border-border ts-shadow-card overflow-hidden">
             <div className="h-32 relative overflow-hidden">
-              <img src={spot.img} alt={spot.name} className="w-full h-full object-cover" loading="lazy" />
+              <img src={spot.img} alt={spot.name} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
               <div className="absolute bottom-2 left-3 right-3 flex items-end justify-between">
                 <div>
